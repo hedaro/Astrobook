@@ -1,7 +1,16 @@
 #Astrobook
 This project will be a basic social network (facebook clone) example created with **Meteor.js**, to demonstrate its functionallity and some of the patterns recommended for Meteor projects.
 
-##App structure
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [App structure](#app-structure)
+- [Routes, layouts and components](#routes-layouts-and-components)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## App structure
 The application structure is based on the [Meteor Guide](http://guide.meteor.com/structure.html) and the [Todos example application](https://github.com/meteor/todos).
 
 Most of the code (templates, methods, collections, etc.) is contained in the `/imports` directory, with entry points for the client and server in `/client/main.js` and `/server/main.js` respectively.
@@ -22,7 +31,7 @@ Collections, publications and methods should be grouped by entities inside the `
 ###TODO
 -Remove `.gitignore` files once the folders contain actual files
 
-##Routes, layouts and components
+## Routes, layouts and components
 This project uses [kadira:flow-router](https://atmospherejs.com/kadira/flow-router) to handle client routes, and the complementary [kadira:blaze-layout](https://atmospherejs.com/kadira/blaze-layout) package to render blaze layout templates for the routes.
 
 The application contains a single layout called **App_body**, defined inside the `/imports/ui/layouts` directory for all routes we create, with a `Template.dynamic` component to render the corresponding route's view. The view's template name is passed by the router with the `main` argument.
