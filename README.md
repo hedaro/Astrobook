@@ -21,3 +21,10 @@ Collections, publications and methods should be grouped by entities inside the `
 
 ###TODO
 -Remove `.gitignore` files once the folders contain actual files
+
+##Routes, layouts and components
+This project uses [kadira:flow-router](https://atmospherejs.com/kadira/flow-router) to handle client routes, and the complementary [kadira:blaze-layout](https://atmospherejs.com/kadira/blaze-layout) package to render blaze layout templates for the routes.
+
+The application contains a single layout called **App_body**, defined inside the `/imports/ui/layouts` directory for all routes we create, with a `Template.dynamic` component to render the corresponding route's view. The view's template name is passed by the router with the `main` argument.
+
+The template passed to BlazeLayout as `{main=page_name}` in each route should be a page component (saved in `/includes/ui/pages`) which handles data collection from the route and necessary subscriptions and then passes this data to the actual main view template (saved in `/imports/ui/components`). Any other reusable component should be saved in the same directory as the main views, though they could be grouped in separate sub-directories if needed, and they should only be called by a higher level template, being the _"page"_ componen the top level component.
