@@ -1,5 +1,5 @@
 {
-  "name": "Astrologybook",
+  "name": "Astrobook",
   "private": true,
   "scripts": {
     "start": "meteor run"
