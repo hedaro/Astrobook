@@ -1,31 +1,36 @@
 <template name="App_body">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Astrobook</a>
+  <div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Astrobook</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div id="app-root" class="container-fluid">
-    <div id="app-content" class="row">
-      <div class="col-md-8 col-md-offset-2 col-sm-12">
-        {{> Template.dynamic template=main}}
+    <div id="app-root" class="container-fluid">
+      <div id="app-content" class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-12">
+          {{> Template.dynamic template=main}}
+        </div>
       </div>
     </div>
+
+    <footer id="footer">
+      <div class="container">
+        <p class="text-muted">
+          Astrobook &copy; 2016
+        </p>
+        <span class="text-muted">
+          <small>Powered by <a href="https://www.meteor.com">MeteorJS</a></small>
+        </span>
+      </div>
+    </footer>
   </div>
-
-  <footer class="footer">
-    <div class="container">
-      <p class="text-muted">
-        Astrobook &copy; 2016
-      </p>
-    </div>
-  </footer>
 </template>
