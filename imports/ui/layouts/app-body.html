@@ -13,11 +13,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          {{#if currentUser}}
-            <button type="button" id="logout-button" class="btn btn-default navbar-btn navbar-right">Logut</button>
-          {{else}}
-            {{> Login}}
-          {{/if}}
+          {{> Header_controls}}
         </div>
       </div>
     </nav>

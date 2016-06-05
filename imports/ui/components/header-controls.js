@@ -1,9 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
-import './login.html';
+import './header-controls.html';
 
-Template.Login.events({
+Template.Header_controls.events({
+  'click #logout-button'(event, instance) {
+    event.preventDefault();
+    Meteor.logout();
+  },
   'submit #login-form'(event, instance) {
     event.preventDefault();
     Meteor.loginWithPassword(event.target.email.value, event.target.password.value, (err) => {
