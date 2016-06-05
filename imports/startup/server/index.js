@@ -1,5 +1,2 @@
-import { Meteor } from 'meteor/meteor';
-
-Meteor.startup(() => {
-
-});
+import './fixtures.js';
+import './register-api.js';
