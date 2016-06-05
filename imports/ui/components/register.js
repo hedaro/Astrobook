@@ -1,5 +1,5 @@
-import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { Accounts } from 'meteor/accounts-base';
 
 import './register.html';
 
@@ -12,20 +12,18 @@ Template.Register.events({
       return;
     }
 
-    const data = {
-      email: event.target.email.value,
-      password: event.target.password.value,
+    const options = {};
+    options.email = event.target.email.value;
+    options.password = event.target.password.value;
+    options.profile = {
       firstName: event.target.first.value,
       lastName: event.target.last.value,
-    }
+    };
 
-    Meteor.call('users.insert', data, (err, res) => {
+    Accounts.createUser(options, (err) => {
       if (err) {
-        console.log(err);
-      } else {
-        console.log(res);
+        console.log(err.error);
       }
-
     });
   },
 });

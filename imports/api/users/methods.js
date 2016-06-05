@@ -1,8 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import { Accounts } from 'meteor/accounts-base';
+
+import './users.js';
 
 Meteor.methods({
-  'users.insert'(data) {
-    return Accounts.createUser(data);
-  },
 });
