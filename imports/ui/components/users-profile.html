@@ -1,0 +1,85 @@
+<template name="Users_profile">
+  <div id="profile-cover" class="jumbotron">
+    <div id="profile-cover-name">
+      <h2>
+        {{profile.firstName}} {{profile.lastName}}
+      </h2>
+      <h3>
+        {{profile.alias}}
+      </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Friends <small>&sdot; 150</small></h4>
+        </div>
+        <div class="panel-body">
+          Your friends list.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+        {{#if currentUser}}
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form id="new-post">
+              <textarea class="form-control" id="new-post-text" rows="3" name="text" placeholder="What's on your mind?"></textarea>
+              <button type="submit" id="new-post-submit" class="btn btn-default">Post</button>
+            </form>
+          </div>
+        </div>
+        {{/if}}
+
+      <div id="user-posts">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h4>
+              <a href="{{pathFor 'Users.profile' _id=_id}}">{{profile.firstName}}</a>
+              <br>
+              <small>June 5 2016</small>
+            </h4>
+            Post Content etc, etc, etc.
+            <hr>
+            <a href="#">Like</a> &sdot; <a href="#">Comment</a> &sdot; <a href="#">Share</a>
+          </div>
+          <div class="panel-footer">
+            <div class="post-comment">
+              <h5>
+                <a href="{{pathFor 'Users.profile' _id=_id}}">{{profile.firstName}}</a>
+                This is a comment
+                <br>
+                <small><a href="#">Like</a> &sdot; <a href="#">Reply</a> &sdot; June 5 2016</small>
+              </h5>
+            </div>
+            <div class="post-comment">
+              <h5>
+                <a href="{{pathFor 'Users.profile' _id=_id}}">{{profile.firstName}}</a>
+                This is a comment
+                <br>
+                <small><a href="#">Like</a> &sdot; <a href="#">Reply</a> &sdot; June 5 2016</small>
+              </h5>
+            </div>
+            <form id="new-comment">
+              <input type="text" id="comment-text" name="comment" class="form-control" placeholder="Write a comment...">
+            </form>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            Post Content etc, etc, etc.
+          </div>
+          <div class="panel-footer">
+            <form id="new-comment">
+              <input type="text" id="comment-text" name="comment" class="form-control" placeholder="Write a comment...">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

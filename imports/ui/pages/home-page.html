@@ -1,3 +1,7 @@
 <template name="Home_page">
-  {{> Home}}
+  {{#if loggingIn}}
+    Loading...
+  {{else}}
+    {{> Home}}
+  {{/if}}
 </template>

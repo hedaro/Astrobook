@@ -28,3 +28,35 @@ body {
 .container .text-muted {
   margin: 10px 0;
 }
+
+#profile-cover {
+  height: 250px;
+  position: relative;
+}
+
+#profile-cover-name {
+  position: absolute;
+  bottom: 10px;
+}
+
+#new-post textarea {
+  resize: none;
+}
+
+#new-post button[type="submit"] {
+  float: right;
+  background-color: #101010;
+  color: #9d9d9d;
+}
+
+#new-post button[type="submit"]:hover {
+  color: #ffffff;
+}
+
+#user-posts .panel .panel-body {
+  padding: 10px;
+}
+
+#user-posts .panel .panel-body hr {
+  margin: 10px 0px;
+}

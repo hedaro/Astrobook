@@ -1,6 +1,16 @@
 <template name="Header_controls">
   {{#if currentUser}}
-    <button type="button" id="logout-button" class="btn btn-default btn-sm navbar-btn navbar-right">Logut</button>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+          <li><a id="profile-link" href="{{pathFor 'Users.profile' _id=currentUser._id}}">
+            {{currentUser.profile.firstName}}
+          </a></li>
+          <li><a id="home-link" href="/">
+            Home
+          </a></li>
+      </ul>
+      <button type="button" id="logout-button" class="btn btn-default btn-sm navbar-btn">Logut</button>
+    </div>
   {{else}}
     <form id="login-form" class="navbar-form navbar-right" role="login">
       <div class="form-group">
