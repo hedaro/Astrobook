@@ -60,3 +60,7 @@ body {
 #user-posts .panel .panel-body hr {
   margin: 10px 0px;
 }
+
+.post-text {
+  white-space: pre-line;
+}

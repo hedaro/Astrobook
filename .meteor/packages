@@ -22,3 +22,5 @@ kadira:blaze-layout
 twbs:bootstrap
 accounts-password
 arillo:flow-router-helpers
+aldeed:simple-schema
+aldeed:collection2
