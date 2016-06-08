@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 
-import './posts.js';
+import { Posts } from './posts.js';
 
 Meteor.methods({
   'posts.insert'(text) {

@@ -24,14 +24,7 @@
 
     <div class="col-md-8">
         {{#if currentUser}}
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <form id="new-post">
-              <textarea class="form-control" id="new-post-text" rows="3" name="text" placeholder="What's on your mind?"></textarea>
-              <button type="submit" id="new-post-submit" class="btn btn-default">Post</button>
-            </form>
-          </div>
-        </div>
+          {{> Insert_post}}
         {{/if}}
 
       <div id="user-posts">
