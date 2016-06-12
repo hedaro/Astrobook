@@ -33,7 +33,6 @@ Posts.schema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
-    denyUpdate: true,
     autoValue() {
       return new Date();
     },
