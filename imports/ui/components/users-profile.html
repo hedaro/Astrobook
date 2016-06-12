@@ -29,41 +29,7 @@
 
       <div id="user-posts">
         {{#each post in posts}}
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h4>
-                <a href="{{pathFor 'Users.profile' _id=post.from._id}}">{{post.from.name}}</a>
-                <br>
-                <small>June 5 2016</small>
-              </h4>
-                <span class="post-text">{{{post.text}}}</span>
-              <hr>
-              <a href="#" class="text-muted"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</a> &sdot;
-              <a href="#" class="text-muted"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment</a> &sdot;
-              <a href="#" class="text-muted"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</a>
-            </div>
-            <div class="panel-footer">
-              <div class="post-comment">
-                <h5>
-                  <a href="{{pathFor 'Users.profile' _id=_id}}">{{user.profile.firstName}}</a>
-                  This is a comment
-                  <br>
-                  <small><a href="#">Like</a> &sdot; <a href="#">Reply</a> &sdot; June 5 2016</small>
-                </h5>
-              </div>
-              <div class="post-comment">
-                <h5>
-                  <a href="{{pathFor 'Users.profile' _id=_id}}">{{user.profile.firstName}}</a>
-                  This is a comment
-                  <br>
-                  <small><a href="#">Like</a> &sdot; <a href="#">Reply</a> &sdot; June 5 2016</small>
-                </h5>
-              </div>
-              <form id="new-comment">
-                <input type="text" id="comment-text" name="comment" class="form-control" placeholder="Write a comment...">
-              </form>
-            </div>
-          </div>
+          {{> Post_item post}}
         {{/each}}
       </div>
     </div>
